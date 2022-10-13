@@ -146,7 +146,7 @@ def test_check_and_column_configured_invalid_values(data_source_fixture: DataSou
 
     digit_regex = (
         r"ID[[:digit:]]"
-        if data_source_fixture.data_source_name == "mysql"
+        if data_source_fixture.data_source_name in ["mysql", "clickhouse"]
         else data_source_fixture.data_source.escape_regex(r"ID\d")
     )
 

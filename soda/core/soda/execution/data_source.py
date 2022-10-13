@@ -174,6 +174,8 @@ class DataSource:
             return "SQLServer"
         elif "mysql" == data_source_type:
             return "MySQL"
+        elif "clickhouse" == data_source_type:
+            return "ClickHouse"
         else:
             return f"{data_source_type[0:1].upper()}{data_source_type[1:]}"
 

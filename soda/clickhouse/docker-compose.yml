@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  soda-core-clickhouse:
+    image: clickhouse/clickhouse-server
+    ports:
+    - "8123:8123"
+    - "9000:9000"
+    volumes:
+      - ./.clickhouse/:/var/lib/clickhouse
+    environment:
+      - CLICKHOUSE_DATABASE=sodacore
+      - CLICKHOUSE_USER=sodacore
+      - CLICKHOUSE_PASSWORD=sodacore
+
